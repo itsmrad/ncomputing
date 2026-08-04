@@ -52,17 +52,22 @@
   --color-ink-muted: #425466;
   --color-ink-subtle: #8792a2;
   --color-brand: #635bff;
-  --color-brand-hover: #7a73ff;
+  /* Darker than `brand`, not lighter: this token is both a hover text colour on
+     white (mega/mobile panel links) and a hover fill under white text (Contact
+     sales), and the previous #7a73ff only reached 3.7:1 in either direction.
+     5.7:1 works for both roles. */
+  --color-brand-hover: #554cf0;
   --color-hairline: #e6ebf1;
   --color-surface-subtle: #f6f9fc;
 
   /* Warm accent shared with the about section.
      `orange` is the about-section fill and is only legible with dark ink on
      top (7.7:1); `orange-ink` is the deepened shade used for orange *text* on
-     white, where the fill tone would only reach 2.2:1. */
+     white, where the fill tone would only reach 2.2:1. `orange-ink` itself is
+     dark enough for body copy (5.1:1) — footer link hovers use it at 14px. */
   --color-brand-orange: #f29a4a;
   --color-brand-orange-hover: #e88b33;
-  --color-brand-orange-ink: #c9741f;
+  --color-brand-orange-ink: #a85a12;
   --color-brand-warm-ink: #2c180d;
   --color-brand-cream: #fff8ee;
 
