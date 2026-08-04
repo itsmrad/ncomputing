@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-import { navPanelId } from "../config/nav-config";
+import { navPanelId, navTriggerId } from "../config/nav-config";
 import type { NavItem } from "../types";
 
 type NavTriggerProps = {
@@ -45,6 +45,7 @@ export function NavTrigger({
   return (
     <button
       type="button"
+      id={navTriggerId(item.id)}
       aria-expanded={isOpen}
       aria-controls={navPanelId(item.id)}
       className={className}

@@ -172,3 +172,6 @@ export const NAV_ACTIONS: { signIn: NavLink; contactSales: NavLink } = {
 
 /** Shared between the trigger (`aria-controls`) and the panel it reveals. */
 export const navPanelId = (itemId: string) => `nav-panel-${itemId}`;
+
+/** Lets the Escape handler hand focus back to the trigger that opened a panel. */
+export const navTriggerId = (itemId: string) => `nav-trigger-${itemId}`;

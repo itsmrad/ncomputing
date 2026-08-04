@@ -40,10 +40,13 @@ export function NavMobileToggle({
 export function NavMobilePanel({
   items,
   isOpen,
+  onNavigate,
   className,
 }: {
   items: NavItem[];
   isOpen: boolean;
+  /** Closes the panel before a link routes, so it is not left open on arrival. */
+  onNavigate: () => void;
   className?: string;
 }) {
   if (!isOpen) return null;
@@ -51,6 +54,12 @@ export function NavMobilePanel({
   return (
     <div
       id={MOBILE_PANEL_ID}
+      // Delegated so every link closes the panel — top level, nested column
+      // links and the actions at the bottom — without threading a handler
+      // through each one. `<summary>` clicks are ignored: they are not anchors.
+      onClick={(event) => {
+        if ((event.target as HTMLElement).closest("a")) onNavigate();
+      }}
       className={cn(
         "border-hairline relative max-h-[calc(100dvh-62px)] overflow-y-auto rounded-b-lg border-t px-5 pt-2 pb-6",
         className,

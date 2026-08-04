@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { cn } from "@/lib/utils";
 
-import { NAV_ITEMS } from "../config/nav-config";
+import { NAV_ITEMS, navTriggerId } from "../config/nav-config";
 import { useNavMenu } from "../hooks/use-nav-menu";
 import { NavActions } from "./nav-actions";
 import { NavLogo } from "./nav-logo";
@@ -16,6 +16,7 @@ export function SiteNavbar() {
   const { activeId, openMenu, closeMenu, closeMenuNow } = useNavMenu();
   const [isPointerOver, setIsPointerOver] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const closeMobileMenu = () => setIsMobileOpen(false);
 
   const isMenuOpen = activeId !== null;
   // Stripe reveals the white card as soon as the pointer touches the bar.
@@ -32,7 +33,17 @@ export function SiteNavbar() {
             closeMenu();
           }}
           onKeyDown={(event) => {
-            if (event.key === "Escape") closeMenuNow();
+            if (event.key !== "Escape") return;
+
+            // The closed panel becomes `inert`, so focus sitting inside it
+            // would be dropped on the body. Hand it back to the trigger first,
+            // then close: the trigger's own onFocus reopens the menu, and the
+            // close batches after it in the same event.
+            if (activeId) {
+              document.getElementById(navTriggerId(activeId))?.focus();
+              closeMenuNow();
+            }
+            closeMobileMenu();
           }}
         >
           <div
@@ -77,6 +88,7 @@ export function SiteNavbar() {
           <NavMobilePanel
             items={NAV_ITEMS}
             isOpen={isMobileOpen}
+            onNavigate={closeMobileMenu}
             className="lg:hidden"
           />
         </div>
