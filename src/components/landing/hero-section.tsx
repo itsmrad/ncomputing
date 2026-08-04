@@ -61,7 +61,7 @@ export function HeroSection() {
               width={1254}
               height={1254}
               priority
-              sizes="(min-width: 1024px) 540px, 100vw"
+              sizes="(min-width: 1024px) 540px, (min-width: 640px) 420px, 340px"
               className="h-auto max-h-[40svh] w-full max-w-[340px] object-contain [mask-image:radial-gradient(circle_closest-side_at_center,black_92%,transparent_100%)] sm:max-w-[420px] lg:max-h-[56svh] lg:max-w-[540px]"
             />
           </div>
