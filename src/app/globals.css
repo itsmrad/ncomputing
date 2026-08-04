@@ -46,6 +46,30 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Brand palette (Stripe-inspired) */
+  --color-ink: #0a2540;
+  --color-ink-muted: #425466;
+  --color-ink-subtle: #8792a2;
+  --color-brand: #635bff;
+  --color-brand-hover: #7a73ff;
+  --color-hairline: #e6ebf1;
+  --color-surface-subtle: #f6f9fc;
+
+  --shadow-nav:
+    0 15px 35px rgba(43, 52, 69, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+
+  /* Logo marquee: one half of the duplicated track per cycle. */
+  --animate-marquee: marquee 45s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
 :root {
