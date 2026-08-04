@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
+import { BrandLogo } from "@/components/shared/brand-logo";
 import { fontDisplay } from "@/lib/fonts";
 
 import {
@@ -76,10 +77,10 @@ export function SiteFooter() {
             <div className="lg:col-span-4 lg:pr-8">
               <Link
                 href="/"
-                aria-label="ncomputing home"
-                className="hover:text-brand-orange-ink focus-visible:ring-brand-orange/60 inline-block rounded-sm text-[24px] leading-none font-bold tracking-[-0.02em] text-[#203138] transition-colors duration-150 outline-none focus-visible:ring-2"
+                aria-label="NComputing home"
+                className="focus-visible:ring-brand-orange/60 inline-flex rounded-sm transition-opacity duration-150 outline-none hover:opacity-70 focus-visible:ring-2"
               >
-                ncomputing
+                <BrandLogo className="h-11" />
               </Link>
 
               <p className="mt-8 max-w-[22ch] text-[26px] leading-[1.15] font-medium text-[#203138]">

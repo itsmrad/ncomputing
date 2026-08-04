@@ -1,19 +1,19 @@
 import Link from "next/link";
 
+import { BrandLogo } from "@/components/shared/brand-logo";
 import { cn } from "@/lib/utils";
 
-/** Wordmark. Swap the span for an SVG once the real logo lands. */
 export function NavLogo({ className }: { className?: string }) {
   return (
     <Link
       href="/"
-      aria-label="ncomputing home"
+      aria-label="NComputing home"
       className={cn(
-        "text-ink hover:text-ink-subtle rounded-sm text-[21px] leading-none font-bold tracking-[-0.02em] transition-colors duration-150 outline-none focus-visible:ring-2 focus-visible:ring-brand/40",
+        "focus-visible:ring-brand/40 inline-flex rounded-sm transition-opacity duration-150 outline-none hover:opacity-70 focus-visible:ring-2",
         className,
       )}
     >
-      ncomputing
+      <BrandLogo className="h-8" priority />
     </Link>
   );
 }
