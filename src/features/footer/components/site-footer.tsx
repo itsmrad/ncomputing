@@ -87,7 +87,7 @@ export function SiteFooter() {
                 Let&apos;s stay in touch
               </p>
 
-              <p className="mt-4 max-w-[38ch] text-[15px] leading-6 text-[#203138]/65">
+              <p className="mt-4 max-w-[38ch] text-[15px] leading-6 text-[#203138]/70">
                 Secure desktop virtualization and managed endpoints for
                 organizations in more than 140 countries.
               </p>
@@ -99,7 +99,7 @@ export function SiteFooter() {
                       href={href}
                       target="_blank"
                       rel="noreferrer"
-                      aria-label={label}
+                      aria-label={`${label} (opens in a new tab)`}
                       className="hover:bg-brand-orange hover:text-brand-warm-ink hover:ring-brand-orange focus-visible:ring-brand-orange flex size-10 items-center justify-center rounded-full text-[#203138]/70 ring-1 ring-[#203138]/15 transition-colors duration-150 outline-none focus-visible:ring-2"
                     >
                       <Glyph className="size-[18px]" />
@@ -163,14 +163,14 @@ export function SiteFooter() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="hover:text-brand-orange-ink focus-visible:ring-brand-orange/60 rounded-sm text-[14px] text-[#203138]/60 transition-colors duration-150 outline-none focus-visible:ring-2"
+                      className="hover:text-brand-orange-ink focus-visible:ring-brand-orange/60 rounded-sm text-[14px] text-[#203138]/70 transition-colors duration-150 outline-none focus-visible:ring-2"
                     >
                       {link.label}
                     </Link>
                   </li>
                 ))}
               </ul>
-              <p className="text-[14px] text-[#203138]/50">
+              <p className="text-[14px] text-[#203138]/70">
                 &copy; {year} NComputing Global, Inc. All rights reserved.
               </p>
             </div>
