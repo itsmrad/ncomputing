@@ -46,6 +46,55 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Brand palette (Stripe-inspired) */
+  --color-ink: #0a2540;
+  --color-ink-muted: #425466;
+  --color-ink-subtle: #8792a2;
+  --color-brand: #635bff;
+  /* Darker than `brand`, not lighter: this token is both a hover text colour on
+     white (mega/mobile panel links) and a hover fill under white text (Contact
+     sales), and the previous #7a73ff only reached 3.7:1 in either direction.
+     5.7:1 works for both roles. */
+  --color-brand-hover: #554cf0;
+  --color-hairline: #e6ebf1;
+  --color-surface-subtle: #f6f9fc;
+
+  /* Warm accent shared with the about section.
+     `orange` is the about-section fill and is only legible with dark ink on
+     top (7.7:1); `orange-ink` is the deepened shade used for orange *text* on
+     white, where the fill tone would only reach 2.2:1. `orange-ink` itself is
+     dark enough for body copy (5.1:1) — footer link hovers use it at 14px. */
+  --color-brand-orange: #f29a4a;
+  --color-brand-orange-hover: #e88b33;
+  --color-brand-orange-ink: #a85a12;
+  --color-brand-warm-ink: #2c180d;
+  --color-brand-cream: #fff8ee;
+
+  --shadow-nav:
+    0 15px 35px rgba(43, 52, 69, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+
+  /* Logo marquee: one half of the duplicated track per cycle. */
+  --animate-marquee: marquee 45s linear infinite;
+  --animate-workspace-progress: workspace-progress 6s linear both;
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes workspace-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 :root {
