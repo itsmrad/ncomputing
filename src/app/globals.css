@@ -56,11 +56,22 @@
   --color-hairline: #e6ebf1;
   --color-surface-subtle: #f6f9fc;
 
+  /* Warm accent shared with the about section.
+     `orange` is the about-section fill and is only legible with dark ink on
+     top (7.7:1); `orange-ink` is the deepened shade used for orange *text* on
+     white, where the fill tone would only reach 2.2:1. */
+  --color-brand-orange: #f29a4a;
+  --color-brand-orange-hover: #e88b33;
+  --color-brand-orange-ink: #c9741f;
+  --color-brand-warm-ink: #2c180d;
+  --color-brand-cream: #fff8ee;
+
   --shadow-nav:
     0 15px 35px rgba(43, 52, 69, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
 
   /* Logo marquee: one half of the duplicated track per cycle. */
   --animate-marquee: marquee 45s linear infinite;
+  --animate-workspace-progress: workspace-progress 6s linear both;
 }
 
 @keyframes marquee {
@@ -69,6 +80,15 @@
   }
   to {
     transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes workspace-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }
 

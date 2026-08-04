@@ -1,4 +1,9 @@
-import { DM_Sans, Inter } from "next/font/google";
+import {
+  Bricolage_Grotesque,
+  DM_Sans,
+  Inter,
+  Lora,
+} from "next/font/google";
 
 /**
  * Stripe ships `sohne-var` (Söhne, Klim Type Foundry) — a licensed family that
@@ -26,6 +31,22 @@ export const fontSans = Inter({
 export const fontDisplay = DM_Sans({
   subsets: ["latin"],
   axes: ["opsz"],
+  display: "swap",
+  fallback: ["Helvetica Neue", "Arial", "sans-serif"],
+});
+
+/** Display pairing used only by the reference-led support section. */
+export const fontSupportHeading = Lora({
+  subsets: ["latin"],
+  weight: "700",
+  display: "swap",
+  fallback: ["Georgia", "Times New Roman", "serif"],
+});
+
+export const fontSupportSans = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: "variable",
+  axes: ["opsz", "wdth"],
   display: "swap",
   fallback: ["Helvetica Neue", "Arial", "sans-serif"],
 });
