@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import { Pause, Play } from "lucide-react";
 
 import { fontDisplay } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
 
 /**
  * Trusted-by band — Stripe-style hairline strip below the hero.
@@ -91,6 +96,11 @@ function LogoRow({ ariaHidden }: { ariaHidden?: boolean }) {
 }
 
 export function TrustedBy() {
+  // Hovering pauses the loop, but that leaves keyboard and touch users with an
+  // animation they cannot stop, so the toggle owns the paused state and the
+  // hover pause only applies while it is running.
+  const [isPaused, setIsPaused] = useState(false);
+
   return (
     <section
       aria-label="Trusted by"
@@ -103,11 +113,34 @@ export function TrustedBy() {
         <div className="border-hairline h-8 shrink-0 border-l" />
 
         <div className="group relative flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_48px,black_calc(100%-48px),transparent)]">
-          <div className="animate-marquee flex w-max will-change-transform group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+          <div
+            className={cn(
+              "animate-marquee flex w-max will-change-transform motion-reduce:animate-none",
+              isPaused
+                ? "[animation-play-state:paused]"
+                : "group-hover:[animation-play-state:paused]",
+            )}
+          >
             <LogoRow />
             <LogoRow ariaHidden />
           </div>
         </div>
+
+        <button
+          type="button"
+          onClick={() => setIsPaused((paused) => !paused)}
+          aria-pressed={isPaused}
+          aria-label={
+            isPaused ? "Play the customer logos" : "Pause the customer logos"
+          }
+          className="text-ink-subtle hover:text-ink focus-visible:ring-brand/40 grid size-8 shrink-0 place-items-center rounded-sm transition-colors duration-150 outline-none focus-visible:ring-2 motion-reduce:hidden"
+        >
+          {isPaused ? (
+            <Play aria-hidden className="size-3.5" />
+          ) : (
+            <Pause aria-hidden className="size-3.5" />
+          )}
+        </button>
       </div>
     </section>
   );
