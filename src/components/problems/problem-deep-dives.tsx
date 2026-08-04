@@ -71,7 +71,7 @@ export function ProblemDeepDives() {
     >
       <div className="mx-auto w-full max-w-[1312px]">
         <div className="max-w-[760px]">
-          <p className="text-[0.72rem] font-bold tracking-[0.12em] text-ink-subtle uppercase">
+          <p className="text-[0.72rem] font-bold tracking-[0.12em] text-[#647184] uppercase">
             In detail
           </p>
           <h2
@@ -90,7 +90,11 @@ export function ProblemDeepDives() {
               aria-labelledby={`${dive.id}-heading`}
               className="border-hairline grid scroll-mt-24 gap-[clamp(1.5rem,3vw,4rem)] border-t py-[clamp(2.25rem,3.5vw,3.5rem)] last:border-b lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]"
             >
-              <div>
+              {/* Sticky on wide screens: the response column is roughly twice
+                  the height of the label column, so without this the problem
+                  title scrolls away from the answer it belongs to and leaves a
+                  tall empty gutter behind. `top` clears the 62px navbar. */}
+              <div className="lg:sticky lg:top-[86px] lg:self-start">
                 <p className="text-[0.72rem] font-bold tracking-[0.12em] text-brand-orange-ink uppercase">
                   {dive.label}
                 </p>
@@ -114,14 +118,14 @@ export function ProblemDeepDives() {
               </div>
 
               <div>
-                <h4 className="text-[0.72rem] font-bold tracking-[0.12em] text-ink-subtle uppercase">
+                <h4 className="text-[0.72rem] font-bold tracking-[0.12em] text-[#647184] uppercase">
                   Why it happens
                 </h4>
                 <p className="mt-3 max-w-[62ch] text-[clamp(1rem,1.3vw,1.1rem)] leading-[1.65] text-ink-muted">
                   {dive.cause}
                 </p>
 
-                <h4 className="mt-[clamp(1.75rem,2.6vw,2.25rem)] text-[0.72rem] font-bold tracking-[0.12em] text-ink-subtle uppercase">
+                <h4 className="mt-[clamp(1.75rem,2.6vw,2.25rem)] text-[0.72rem] font-bold tracking-[0.12em] text-[#647184] uppercase">
                   How we address it
                 </h4>
                 <ol className="mt-4 flex flex-col gap-4">

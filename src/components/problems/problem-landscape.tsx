@@ -64,7 +64,7 @@ export function ProblemLandscape() {
     >
       <div className="mx-auto w-full max-w-[1312px]">
         <div className="max-w-[760px]">
-          <p className="text-[0.72rem] font-bold tracking-[0.12em] text-ink-subtle uppercase">
+          <p className="text-[0.72rem] font-bold tracking-[0.12em] text-[#647184] uppercase">
             The landscape
           </p>
           <h2
@@ -102,7 +102,7 @@ export function ProblemLandscape() {
               </p>
 
               <div className="border-hairline mt-auto border-t pt-4 text-[0.85rem] leading-[1.5]">
-                <span className="font-semibold text-ink-subtle">Impact — </span>
+                <span className="font-semibold text-[#647184]">Impact — </span>
                 <span className="text-ink-muted">{problem.impact}</span>
               </div>
             </li>

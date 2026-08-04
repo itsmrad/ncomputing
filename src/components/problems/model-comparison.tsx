@@ -69,7 +69,7 @@ export function ModelComparison() {
     >
       <div className="mx-auto w-full max-w-[1312px]">
         <div className="max-w-[760px]">
-          <p className="text-[0.72rem] font-bold tracking-[0.12em] text-ink-subtle uppercase">
+          <p className="text-[0.72rem] font-bold tracking-[0.12em] text-[#647184] uppercase">
             Side by side
           </p>
           <h2
@@ -98,13 +98,13 @@ export function ModelComparison() {
               <tr className="border-hairline border-b bg-surface-subtle">
                 <th
                   scope="col"
-                  className="w-[22%] px-[clamp(1rem,1.6vw,1.5rem)] py-[clamp(0.9rem,1.3vw,1.15rem)] text-[0.72rem] font-bold tracking-[0.12em] text-ink-subtle uppercase"
+                  className="w-[22%] px-[clamp(1rem,1.6vw,1.5rem)] py-[clamp(0.9rem,1.3vw,1.15rem)] text-[0.72rem] font-bold tracking-[0.12em] text-[#647184] uppercase"
                 >
                   Dimension
                 </th>
                 <th
                   scope="col"
-                  className="border-hairline w-[39%] border-l px-[clamp(1rem,1.6vw,1.5rem)] py-[clamp(0.9rem,1.3vw,1.15rem)] text-[0.72rem] font-bold tracking-[0.12em] text-ink-subtle uppercase"
+                  className="border-hairline w-[39%] border-l px-[clamp(1rem,1.6vw,1.5rem)] py-[clamp(0.9rem,1.3vw,1.15rem)] text-[0.72rem] font-bold tracking-[0.12em] text-[#647184] uppercase"
                 >
                   Conventional PC fleet
                 </th>
@@ -140,7 +140,7 @@ export function ModelComparison() {
           </table>
         </div>
 
-        <p className="mt-4 text-[0.85rem] leading-[1.5] text-ink-subtle">
+        <p className="mt-4 text-[0.85rem] leading-[1.5] text-[#647184]">
           Not every workload belongs on a thin endpoint. Engineering
           workstations, heavy local GPU work and offline field devices are still
           better served by a PC — and we will say so.

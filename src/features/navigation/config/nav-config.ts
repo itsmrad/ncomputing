@@ -101,37 +101,9 @@ export const NAV_ITEMS: NavItem[] = [
     ],
   },
   {
-    id: "developers",
-    label: "Developers",
-    columns: [
-      {
-        title: "Get started",
-        links: [
-          { label: "Documentation", href: "#" },
-          { label: "Quickstarts", href: "#" },
-          { label: "API reference", href: "#" },
-          { label: "Changelog", href: "#" },
-        ],
-      },
-      {
-        title: "Tools",
-        links: [
-          { label: "CLI", href: "#" },
-          { label: "SDKs", href: "#" },
-          { label: "Terraform provider", href: "#" },
-          { label: "Sandbox", href: "#" },
-        ],
-      },
-      {
-        title: "Community",
-        variant: "subtle",
-        links: [
-          { label: "Discord", href: "#" },
-          { label: "GitHub", href: "#" },
-          { label: "Support plans", href: "#" },
-        ],
-      },
-    ],
+    id: "problems",
+    label: "Problems",
+    href: "/problems",
   },
   {
     id: "resources",

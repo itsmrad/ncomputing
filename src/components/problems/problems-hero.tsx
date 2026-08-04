@@ -14,6 +14,11 @@ import { fontDisplay } from "@/lib/fonts";
  * problem statement that shouts reads like marketing, which is the opposite of
  * the intended effect.
  *
+ * Small uppercase labels across this page use `#647184` rather than the
+ * `ink-subtle` token: at these sizes `ink-subtle` only reaches 3.0:1 on white
+ * and 2.98:1 on `surface-subtle`, where 4.5:1 is required. `#647184` clears both
+ * (4.96 and 4.69) while staying visibly lighter than `ink-muted` body copy.
+ *
  * Top padding clears the `absolute` 62px navbar, matching the other pages.
  */
 const ACTION_BASE =
@@ -63,7 +68,7 @@ export function ProblemsHero() {
           {/* A framing panel rather than a stat band: the numbers belong further
               down next to the customers they came from. */}
           <aside className="border-hairline self-start border bg-surface-subtle p-[clamp(1.5rem,2.4vw,2.5rem)]">
-            <p className="text-[0.72rem] font-bold tracking-[0.12em] text-ink-subtle uppercase">
+            <p className="text-[0.72rem] font-bold tracking-[0.12em] text-[#647184] uppercase">
               The pattern
             </p>
             <p className="mt-4 text-[clamp(1.05rem,1.4vw,1.25rem)] leading-[1.55] font-medium text-ink">
