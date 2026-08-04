@@ -48,50 +48,54 @@ export const NAV_ITEMS: NavItem[] = [
   {
     id: "solutions",
     label: "Solutions",
+    // Every link resolves to the /solutions hub for now: the hub covers all of
+    // these entry points in its platform and industry sections, and pointing
+    // them at unbuilt sub-routes would 404. Swap in the specific routes as
+    // those pages ship.
     columns: [
       {
         title: "By stage",
         links: [
-          { label: "Enterprises", href: "#" },
-          { label: "Scale-ups", href: "#" },
-          { label: "Startups", href: "#" },
+          { label: "Enterprises", href: "/solutions" },
+          { label: "Scale-ups", href: "/solutions" },
+          { label: "Startups", href: "/solutions" },
         ],
       },
       {
         title: "By use case",
         links: [
-          { label: "AI training", href: "#" },
-          { label: "AI inference", href: "#" },
-          { label: "Batch processing", href: "#" },
-          { label: "Data warehousing", href: "#" },
-          { label: "Disaster recovery", href: "#" },
-          { label: "Edge computing", href: "#" },
-          { label: "High performance computing", href: "#" },
-          { label: "Hybrid cloud", href: "#" },
-          { label: "Rendering", href: "#" },
-          { label: "Web hosting", href: "#" },
+          { label: "AI training", href: "/solutions" },
+          { label: "AI inference", href: "/solutions" },
+          { label: "Batch processing", href: "/solutions" },
+          { label: "Data warehousing", href: "/solutions" },
+          { label: "Disaster recovery", href: "/solutions" },
+          { label: "Edge computing", href: "/solutions" },
+          { label: "High performance computing", href: "/solutions" },
+          { label: "Hybrid cloud", href: "/solutions" },
+          { label: "Rendering", href: "/solutions" },
+          { label: "Web hosting", href: "/solutions" },
         ],
       },
       {
         title: "By industry",
         links: [
-          { label: "AI companies", href: "#" },
-          { label: "Financial services", href: "#" },
-          { label: "Gaming", href: "#" },
-          { label: "Healthcare", href: "#" },
-          { label: "Media and entertainment", href: "#" },
-          { label: "Public sector", href: "#" },
-          { label: "Research and academia", href: "#" },
-          { label: "Retail", href: "#" },
+          { label: "AI companies", href: "/solutions" },
+          { label: "Financial services", href: "/solutions" },
+          { label: "Gaming", href: "/solutions" },
+          { label: "Healthcare", href: "/solutions" },
+          { label: "Media and entertainment", href: "/solutions" },
+          { label: "Public sector", href: "/solutions" },
+          { label: "Research and academia", href: "/solutions" },
+          { label: "Retail", href: "/solutions" },
         ],
       },
       {
         title: "Ecosystem",
         variant: "subtle",
         links: [
-          { label: "Partners", href: "#" },
-          { label: "Marketplace", href: "#" },
-          { label: "Become a reseller", href: "#" },
+          { label: "Partners", href: "/solutions" },
+          { label: "Marketplace", href: "/solutions" },
+          { label: "Become a reseller", href: "/solutions" },
         ],
       },
     ],
