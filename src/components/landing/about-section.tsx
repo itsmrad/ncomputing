@@ -123,14 +123,14 @@ const CAPABILITIES = [
     name: "Software endpoints",
     product: "LEAF OS",
     description: "Repurpose compatible PCs and laptops as secure thin clients.",
-    href: "#",
+    href: "/leaf-os",
     icon: RefreshCw,
   },
   {
     name: "Desktop virtualization",
     product: "vSpace Pro",
     description: "Deliver and centrally manage server-hosted Windows desktops.",
-    href: "#",
+    href: "/products/vspace-pro",
     icon: Server,
   },
   {
@@ -138,7 +138,7 @@ const CAPABILITIES = [
     product: "VERDE VDI",
     description:
       "Serve Windows and Linux workspaces across on-premise and cloud.",
-    href: "#",
+    href: "/products/verde-vdi",
     icon: Cloud,
   },
   {
@@ -146,7 +146,7 @@ const CAPABILITIES = [
     product: "PMC",
     description:
       "Deploy, configure, update and monitor supported endpoint fleets.",
-    href: "#",
+    href: "/products/pmc",
     icon: Settings2,
   },
 ];
